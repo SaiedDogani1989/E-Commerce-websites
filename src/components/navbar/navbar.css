@@ -1,0 +1,43 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+  }
+  li {
+    list-style: none;
+  }
+  .active{
+    border-bottom:1px solid gray ;
+  }
+
+  .discount {
+    background-color: rgb(250, 209, 27);
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+  /* navbar */
+  /* Google Font Link */
+  
+  .blackNav {
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* position: fixed; */
+    /* z-index: 100; */
+
+  }
+  .blackNav ul li {
+    margin: 20px;
+    display: inline;
+  }
+  .blackNav ul li a {
+    text-decoration: none;
+    color: white;
+    line-height: 40px;
+    border-bottom: 1px transparent solid;
+    transition: border-color 0.8s;
+  }
+  .blackNav ul li a:hover {
+    color: #c2c7b9;
+    border-color: #c2c7b9;
+  }

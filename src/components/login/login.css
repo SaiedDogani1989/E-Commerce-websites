@@ -1,0 +1,63 @@
+a {
+    color: gray;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(204, 201, 182);
+  }
+  .login {
+    padding: 7% 8%;
+  }
+  
+  .login-form {
+    border: 1px solid gray;
+    padding: 30px;
+    width: 60%;
+    margin: auto;
+  }
+  .gmail-facebook {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .fb {
+    background-color: #3b5998;
+    color: white;
+  }
+  .google {
+    background-color: #dd4b39;
+    color: white;
+  }
+  
+  .forget-pass {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (max-width: 900px) {
+  
+      .login{
+          margin-top: 80px;
+          padding: 3% 8%;
+      }
+    .login-form {
+      width: 100%;
+    }
+  }
+  @media (max-width: 500px) {
+      .fb{
+          font-size: 0.8rem;
+      }
+      .google {
+          font-size: 0.8rem;
+      }
+      .login{
+          margin-top: 80px;
+          padding: 0% 1%;
+      }
+    .login-form {
+      width: 100%;
+    }
+  }
+  

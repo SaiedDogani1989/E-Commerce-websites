@@ -1,0 +1,40 @@
+.createAccount {
+    padding: 7% 15%;
+  }
+  
+  .createAccount-form {
+    border: 1px solid gray;
+    padding: 30px;
+    width: 60%;
+    margin: auto;
+  }
+  
+  @media (max-width: 900px) {
+    .createAccount {
+      padding: 3% 8%;
+    }
+  
+    .createAccount-form {
+      width: 80%;
+    }
+    .text{
+      font-size: 1rem;
+  }
+  }
+  
+  @media (max-width: 500px) {
+      .text{
+          font-size: 1rem;
+      }
+    .createAccount {
+      padding: 2% 3%;
+    }
+  
+    .createAccount-form {
+      width: 100%;
+    }
+    .text{
+        font-size: .8rem;
+    }
+  }
+  

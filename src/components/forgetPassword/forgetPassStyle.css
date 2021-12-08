@@ -1,0 +1,24 @@
+.forgetPassForm{
+    padding: 10% 7%;
+    width: 70%;
+    margin: auto;
+}
+.label{
+   margin-bottom:15px;
+   font-size: 1.3rem;
+}
+
+.forget-submit{
+margin-top: 15px;
+}
+.btnS{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:900px){
+    .forgetPassForm{
+        width: 100%;
+        padding: 25% 3%;
+
+    }
+}
