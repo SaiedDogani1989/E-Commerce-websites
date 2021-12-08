@@ -48,17 +48,17 @@ const CreateAccount = () => {
             'success'
         )
     }
-    
+
     return (
         <>
             <section className="createAccount">
                 <form onSubmit={(e) => handleSubmit(e)} className="createAccount-form">
-                    <p className="bg-warning text">Create account and get 10% off for all purchases</p>
+                    <p className="bg-warning text mb-3">Create account and get 10% off for all purchases</p>
                     <div className="mb-3">
                         <Label
                             HtmlFor="exampleInputFullName"
                             className="form-label"
-                            name="Full Name"
+                            name="Full Name:"
                         />
                         <Input
                             onChange={handleChange}
@@ -73,7 +73,7 @@ const CreateAccount = () => {
                         <Label
                             HtmlFor="exampleInputEmail1"
                             className="form-label"
-                            name="Email"
+                            name="Email Address:"
                         />
                         <Input
                             onChange={handleChange}
@@ -88,7 +88,7 @@ const CreateAccount = () => {
                         <Label
                             HtmlFor="exampleInputPassword1"
                             className="form-label"
-                            name="Password"
+                            name="Password:"
                         />
                         <div style={{ "display": "flex" }}>
                             <Input
@@ -108,7 +108,7 @@ const CreateAccount = () => {
                         <Label
                             HtmlFor="exampleInputPassword1"
                             className="form-label"
-                            name="Repeat Password"
+                            name="Confirm Password:"
                         />
                         <Input
                             onChange={handleChange}
@@ -119,7 +119,12 @@ const CreateAccount = () => {
                         />
                         {(inputValues.password === "") ? null : <p>{(inputValues.password === inputValues.repeatPassword) ? <span style={{ "color": "green" }}>The password is ok</span> : <span style={{ "color": "red" }}>The password is not same</span>}</p>}
                     </div>
-                    <button type="submit" className="btn btn-warning">Submit</button>
+                    <button
+                        disabled={inputValues.fullName === "" || inputValues.email === "" || inputValues.password === "" || inputValues.repeatPassword === "" ? true : false}
+                        type="submit"
+                        className="btn btn-warning"
+                    >Submit
+                    </button>
 
                 </form>
             </section>

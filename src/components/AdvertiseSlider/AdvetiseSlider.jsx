@@ -1,8 +1,8 @@
 import React from 'react';
-import Pic1 from "../image/supcalPic1.png"
-import Pic2 from "../image/supcalPic2.png"
-import Pic3 from "../image/supcalPic3.png"
-import Pic4 from "../image/supcalPic4.png"
+import Pic1 from "../image/supcalPic1.jpg"
+import Pic2 from "../image/supcalPic2.jpg"
+import Pic3 from "../image/supcalPic3.jpg"
+import Pic4 from "../image/supcalPic4.jpg"
 
 
 

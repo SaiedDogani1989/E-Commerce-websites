@@ -40,8 +40,8 @@ const Login = () => {
             'Good job!',
             'Enjoy Your 10% Discount!',
             'success'
-          )
-       
+        )
+
     }
 
     return (
@@ -50,10 +50,10 @@ const Login = () => {
                 <form onSubmit={(e) => handleSubmit(e)} className="login-form" method="get">
                     <div className="gmail-facebook">
                         <Link to="#" className="fb btn">
-                            <i className="fab fa-facebook"></i>Login with Facebook
+                            <i className="fab fa-facebook me-2"></i>Login with Facebook
                         </Link>
                         <Link to="#" className="google btn">
-                            <i className="fab fa-google"></i>Login with Google+
+                            <i className="fab fa-google me-2"></i>Login with Google+
                         </Link>
                     </div>
                     <div className="mb-3">
@@ -101,7 +101,11 @@ const Login = () => {
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                         <label className="form-check-label" for="exampleCheck1">Save Me</label>
                     </div>
-                    <button type="submit" className="btn btn-warning">
+                    <button
+                        type="submit"
+                        className="btn btn-warning"
+                        disabled={email === "" || password === "" ? true : false}
+                    >
                         Submit
                     </button>
                     <div className="forget-pass">

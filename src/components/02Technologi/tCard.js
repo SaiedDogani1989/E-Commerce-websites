@@ -1,7 +1,7 @@
-import TechPic1 from "../image/technologyPic1.png"
-import TechPic2 from "../image/technologyPic2.png"
-import TechPic3 from "../image/technologyPic3.png"
-import TechPic4 from "../image/technologyPic4.png"
+import TechPic1 from "../image/technologyPic1.jpg"
+import TechPic2 from "../image/technologyPic2.jpg"
+import TechPic3 from "../image/technologyPic3.jpg"
+import TechPic4 from "../image/technologyPic4.jpg"
 
 const techCard = [
     {

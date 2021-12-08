@@ -58,7 +58,7 @@ const Navbar = () => {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <NavLink
-                      className={(currentNav) => currentNav.isActive ? "dropdown-item active" : "dropdown-item"}
+                      className={(currentNav) => currentNav.isActive ? "dropdown-item active bg-dark" : "dropdown-item"}
                       to="/grocery">
                       Grocery
                     </NavLink>
@@ -66,7 +66,7 @@ const Navbar = () => {
                   </li>
                   <li><hr className="dropdown-divider" /></li>
                   <li><NavLink
-                    className={(currentNav) => currentNav.isActive ? "dropdown-item active" : "dropdown-item"}
+                    className={(currentNav) => currentNav.isActive ? "dropdown-item active bg-dark" : "dropdown-item"}
                     to="/clothes">
                     Clothes
                   </NavLink>
@@ -74,7 +74,7 @@ const Navbar = () => {
                   <li><hr className="dropdown-divider" /></li>
                   <li>
                     <NavLink
-                      className={(currentNav) => currentNav.isActive ? "dropdown-item active" : "dropdown-item"}
+                      className={(currentNav) => currentNav.isActive ? "bg-dark dropdown-item active" : "dropdown-item"}
                       to="technology">
                       Technology
                     </NavLink>
@@ -88,20 +88,20 @@ const Navbar = () => {
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
+                disabled
               />
-              <button className="btn btn-outline-dark" type="submit">
+              <button className="btn btn-outline-dark" type="submit" disabled>
                 <i className="fas fa-search"></i>
               </button>
             </form>
             <NavLink
+            style={{"color":"black"}}
               className={(currentNav) => currentNav.isActive ? "nav-link nav-item active" : "nav-link"}
               to="login"
-              style={{ "color": "gray" }}
             >
-              Login</NavLink>
-            <NavLink
-              type="button"
-              to="#."
+              <i class="fas fa-sign-in-alt"></i></NavLink>
+            <button
+              disabled
               className="btn btn-outline-dark position-relative"
             >
               <i className="fas fa-shopping-basket"></i>
@@ -118,7 +118,7 @@ const Navbar = () => {
                 3+
                 <span className="visually-hidden">unread messages</span>
               </span>
-            </NavLink>
+            </button>
           </div>
         </div>
       </nav>

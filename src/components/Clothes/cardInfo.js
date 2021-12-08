@@ -1,5 +1,5 @@
-import clothPic1 from "../image/clothesPic1.png"
-import clothPic2 from "../image/clothesPic2.png"
+import clothPic1 from "../image/clothesPic1.jpg"
+import clothPic2 from "../image/clothesPic2.jpg"
 
 const clothCards = [
     {

@@ -1,7 +1,7 @@
-import GroceryPic1 from "../image/groceryPic1.png"
-import GroceryPic2 from "../image/groceryPic2.png"
-import GroceryPic3 from "../image/groceryPic3.png"
-import GroceryPic4 from "../image/groceryPic4.png"
+import GroceryPic1 from "../image/groceryPic1.jpg"
+import GroceryPic2 from "../image/groceryPic2.jpg"
+import GroceryPic3 from "../image/groceryPic3.jpg"
+import GroceryPic4 from "../image/groceryPic4.jpg"
 
 
 const cards = [
