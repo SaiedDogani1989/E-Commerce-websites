@@ -19,15 +19,15 @@ import ForgetPassword from './components/forgetPassword/ForgetPass';
 import AboutUs from './components/aboutUS/AboutUs';
 
 function App() {
-  const [offset, setOffset] = useState(0);
+  // const [offset, setOffset] = useState(0);
 
-  useEffect(() => {
-    window.onscroll = () => {
-      setOffset(window.pageYOffset)
-    }
-  });
+  // useEffect(() => {
+  //   window.onscroll = () => {
+  //     setOffset(window.pageYOffset)
+  //   }
+  // });
 
-  console.log(offset);
+  // console.log(offset);
   return (
     <BrowserRouter>
       <Navbar />

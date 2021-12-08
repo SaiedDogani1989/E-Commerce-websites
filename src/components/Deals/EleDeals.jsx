@@ -8,7 +8,7 @@ import Epic4 from "../image/technologyPic4.jpg"
 const EleDeals = () => {
     return (
         <>
-            <h3 className="special-offer bg-light p-4">Deals In Electronics</h3>
+            <h3 className="special-offer bg-light p-2">Deals In Electronics</h3>
             <div className="container">
                 <div className="scrollmenu">
                     <a href=".#" className="scrool"
