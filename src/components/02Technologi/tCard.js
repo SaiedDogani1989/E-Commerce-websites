@@ -5,54 +5,28 @@ import TechPic4 from "../image/technologyPic4.jpg"
 
 const techCard = [
     {
-        key:"1",
-        img:TechPic1 ,
-        price:"799.99$"
+        id: "1163",
+        name: "Laptop",
+        img: TechPic1,
+        price: 799.99
     },
     {
-        key:"2",
-        img:TechPic4 ,
-        price:"199.99$"
+        id: "24512",
+        name: "Charger",
+        img: TechPic4,
+        price: 199.99
     },
     {
-        key:"3",
-        img:TechPic2 ,
-        price:"399.99$"
+        id: "356413",
+        name: "Airpod",
+        img: TechPic2,
+        price: 399.99
     },
     {
-        key:"4",
-        img:TechPic3 ,
-        price:"199.99$"
-    },
-    {
-        key:"5",
-        img:TechPic4 ,
-        price:"299.99$"
-    },
-    {
-        key:"6",
-        img:TechPic2 ,
-        price:"499.99$"
-    },
-    {
-        key:"7",
-        img:TechPic1 ,
-        price:"199.99$"
-    },
-    {
-        key:"8",
-        img:TechPic3 ,
-        price:"799.99$"
-    },
-    {
-        key:"9",
-        img:TechPic2,
-        price:"799.99$"
-    },
-    {
-        key:"10",
-        img:TechPic4 ,
-        price:"799.99$"
+        id: "456312",
+        name: "Headset",
+        img: TechPic3,
+        price: 199.99
     },
 
 ]

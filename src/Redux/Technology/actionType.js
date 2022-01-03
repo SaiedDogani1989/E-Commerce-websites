@@ -1,0 +1,1 @@
+export const SET_TECH_PRODUCTS = 'SET_TECH_PRODUCTS';

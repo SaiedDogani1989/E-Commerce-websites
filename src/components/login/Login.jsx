@@ -49,17 +49,16 @@ const Login = () => {
             <section className="login">
                 <form onSubmit={(e) => handleSubmit(e)} className="login-form" method="get">
                     <div className="gmail-facebook">
-                        <Link to="#" className="fb btn">
+                        <Link to="#" className="fb btn btn-primary">
                             <i className="fab fa-facebook me-2"></i>Login with Facebook
                         </Link>
-                        <Link to="#" className="google btn">
+                        <Link to="#" className="google btn btn-danger">
                             <i className="fab fa-google me-2"></i>Login with Google+
                         </Link>
                     </div>
                     <div className="mb-3">
                         <Label
                             name="Email Address"
-                            HtmlFor="exampleInputEmail1"
                             className="form-label"
                         />
                         <Input
@@ -67,7 +66,6 @@ const Login = () => {
                             refer={inputRef}
                             type="email"
                             className="form-control"
-                            id="exampleInputEmail1"
                             aria="emailHelp"
                             required
                         />
@@ -78,7 +76,6 @@ const Login = () => {
                     <div className="mb-3">
                         <Label
                             name="Password"
-                            HtmlFor="exampleInputPassword1"
                             className="form-label"
                         />
                         <div style={{ "display": "flex" }}>
@@ -86,7 +83,6 @@ const Login = () => {
                                 onChange={(e) => { setPassword(e.target.value) }}
                                 type={showPass ? "password" : "text"}
                                 className="form-control"
-                                id="exampleInputPassword1"
                                 name="password"
                                 required
                             />
@@ -109,8 +105,8 @@ const Login = () => {
                         Submit
                     </button>
                     <div className="forget-pass">
-                        <button className="btn btn-inline-dark" onClick={forgetPassDirection}>Forget Your password?</button>
-                        <button className="btn btn-inline-dark" onClick={createAccountDirection}>Don't have an account?</button>
+                        <button className="btn btn-outline-dark" onClick={forgetPassDirection}>Forget Your password?</button>
+                        <button className="btn btn-outline-dark" onClick={createAccountDirection}>Don't have an account?</button>
                     </div>
                 </form>
             </section>

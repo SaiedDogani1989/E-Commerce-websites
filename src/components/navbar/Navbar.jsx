@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useSelector } from "react-redux"
 import "./navbar.css"
-import SecondNav from './SecondNav';
+
 
 
 const Navbar = () => {
-
-
-
+  const { cart } = useSelector((state => state.shoppingCart));
 
   return (
     <>
@@ -36,13 +35,6 @@ const Navbar = () => {
                   aria-current="page"
                   to="/">
                   Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className={(currentNav) => currentNav.isActive ? "active nav-link " : "nav-link"}
-                  to="/aboutUs"
-                >
-                  About Us
                 </NavLink>
               </li>
               <li className="nav-item dropdown">
@@ -95,14 +87,14 @@ const Navbar = () => {
               </button>
             </form>
             <NavLink
-            style={{"color":"black"}}
+              style={{ "color": "black" }}
               className={(currentNav) => currentNav.isActive ? "nav-link nav-item active" : "nav-link"}
               to="login"
             >
               <i class="fas fa-sign-in-alt"></i></NavLink>
-            <button
-              disabled
+            <NavLink
               className="btn btn-outline-dark position-relative"
+              to="cart"
             >
               <i className="fas fa-shopping-basket"></i>
               <span
@@ -115,14 +107,13 @@ const Navbar = () => {
                 bg-danger
               "
               >
-                3+
+                {cart.length}
                 <span className="visually-hidden">unread messages</span>
               </span>
-            </button>
+            </NavLink>
           </div>
         </div>
       </nav>
-      {/* <SecondNav /> */}
     </>
   );
 }

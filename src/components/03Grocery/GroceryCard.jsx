@@ -1,41 +1,53 @@
-import React, { useState, useReducer } from 'react';
+import React from 'react';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux"
+import Swal from 'sweetalert2';
+import { addToCart } from '../../Redux/cart/action';
+import { getProducts } from "../../Redux/products/action"
 
-
-const initialState = 0;
-const reducer = (state, action) => {
-  switch (action) {
-    case "increment":
-      return state + 1
-    case "decrement":
-      return state - 1
-    default:
-      return initialState
-  }
-}
 
 const GroceryCard = (props) => {
 
+  const { products } = useSelector((state => state.product))
+  const dispatch = useDispatch();
 
-  const [count, dispatch] = useReducer(reducer, initialState)
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+    Swal.fire({
+      title: "Product added",
+      icon: "success",
+      showConfirmButton: false,
+      timerProgressBar: true,
+      timer: 1000,
+      toast: true,
+      position: 'top',
+    });
+  }
+
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [dispatch]);
 
   return (
-    <div className="card col-lg-3" style={{ "width": "18rem" }}>
-      <img
-        src={props.img}
-        className="card-img-top"
-        alt="..."
-      />
-      <div className="card-body">
-        <p className="card-text">{props.price}</p>
-        <button
-          disabled={(count === 0) ? true : false}
-          className="btn btn-danger m-2" onClick={() => dispatch("decrement")}>-</button>
-        <span>{count}</span>
-        <button className="btn btn-primary m-2" onClick={() => dispatch("increment")} >+</button>
+    <>
+      {products && products.map(product => (
+        <div key={product.id} className="card col-lg-3" style={{ "width": "18rem" }}>
+          <img
+            src={product.img}
+            className="card-img-top"
+            alt="..."
+          />
+          <div className="card-body">
+            <div className="d-flex flex-row justify-content-between mb-3">
+              <div>{product.price}$</div>
+              <div className="p-2 bg-warning text-white">{product.name}</div>
+            </div>
+            <button onClick={() => handleAddToCart(product)} className="btn btn-outline-success m-1">Add to card</button>
+          </div>
+        </div>
+      ))}
 
-        <a href="#" className="btn btn-outline-dark m-1">Add to card</a>
-      </div>
-    </div>
+    </>
   );
 }
 
